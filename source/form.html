@@ -28,6 +28,94 @@
         </ul>
       </nav>
     </header>
+    <main>
+      <div class="banner banner--form">
+        <h1 class="banner__title">Вязание на заказ</h1>
+      </div>
+      <p class="order-guide">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+      <form class="order-form" action="https://echo.htmlacademy.ru" method="get">
+        <fieldset class="order-form__item filter filter--type">
+          <legend>Тип</legend>
+          <ul class="filter__list">
+            <li class="filter__option">
+              <input class="filter__input filter__input--radio" type="radio" name="type" value="furniture" id="furniture" checked>
+              <label for="furniture">Аксессуар для интерьера</label>
+            </li>
+            <li class="filter__option">
+              <input class="filter__input filter__input--radio" type="radio" name="type" value="toy" id="toy">
+              <label for="toy">Детская игрушка</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="order-form__item filter filter--color">
+          <legend>Цвет</legend>
+          <ul class="filter__list">
+            <li class="filter__option">
+              <input class="filter__input filter__input--checkbox" type="checkbox" name="color-white" id="filter-white" value="white" checked>
+              <label for="filter-white">Белый</label>
+            </li>
+            <li class="filter__option">
+              <input class="filter__input filter__input--checkbox" type="checkbox" name="color-grey" id="filter-grey" value="grey" checked>
+              <label for="filter-grey">Серый</label>
+            </li>
+            <li class="filter__option">
+              <input class="filter__input filter__input--checkbox" type="checkbox" name="color-Tiffany" id="filter-Tiffany" value="Tiffany">
+              <label for="filter-Tiffany">«Тиффани»</label>
+            </li>
+            <li class="filter__option">
+              <input class="filter__input filter__input--checkbox" type="checkbox" name="color-black" id="filter-black" value="black">
+              <label for="filter-black">Черный</label>
+            </li>
+            <li class="filter__option">
+              <input class="filter__input filter__input--checkbox" type="checkbox" name="color-pink" id="filter-pink" value="pink">
+              <label for="filter-pink">Розовый</label>
+            </li>
+            <li class="filter__option">
+              <input class="filter__input filter__input--checkbox" type="checkbox" name="color-orange" id="filter-orange" value="orange">
+              <label for="filter-orange">Оранжевый</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="order-form__item order-form__item--user-info">
+          <legend>Фио</legend>
+          <ul>
+            <li class="order-form__option">
+              <label for="user-name">Имя:</label>
+              <input type="text" id="user-name" name="user-name" placeholder="Введите ваше имя*" required>
+            </li>
+            <li class="order-form__option">
+              <label for="user-name">Фамилия:</label>
+              <input type="text" id="user-surname" name="user-surname" placeholder="Укажите фамилию*" required>
+            </li>
+            <li class="order-form__option">
+              <label for="user-email">Отчество:</label>
+              <input type="text" id="user-patronym" name="user-patronym" placeholder="Отчество, если желаете">
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="order-form__item order-form__item--user-contacts">
+          <legend class="visually-hidden">Контактные данные пользователя</legend>
+          <ul>
+            <li class="order-form__option">
+              <label for="user-tel">Тел</label>
+              <input type="tel" id="user-tel" name="tel" pattern="^\+7\d{3}\d{7}$"  placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
+            </li>
+            <li class="order-form__option">
+              <label for="user-email">E-mail</label>
+              <input type="email" id="user-email" name="email" pattern="(?!(^[.-].*|[^@]*[.-]@|.*\.{2,}.*)|^.{254}.)([a-zA-Z0-9!#$%&'*+\/=?^_`{|}~.-]+@)(?!-.*|.*-\.)([a-zA-Z0-9-]{1,63}\.)+[a-zA-Z]{2,15}" placeholder="Ваш Email*" required>
+            </li>
+            <li class="order-form__option">
+              <label for="letter-field">Доп</label>
+              <textarea id="letter-field" name="letter" rows="5" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+            </li>
+          </ul>
+        </fieldset>
+        <small class="order-form__legend">
+          <sup>*</sup>Поля обязательны для заполнения
+        </small>
+        <button class="order-form__button button" type="submit">Отправить заказ</button>
+      </form>
+    </main>
 
     <footer class="page-footer">
       <ul class="social-list">
