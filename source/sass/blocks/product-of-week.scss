@@ -1,0 +1,26 @@
+.product-of-week__title {
+  @include font-info(25px, bold, 30px);
+}
+
+.product-of-week__caption {
+  @include font-info(17px, bold, 20px);
+  color: $bluecolor;
+}
+
+.product-of-week__text,
+.product-of-week__item {
+  @include font-info(15px, normal, 24px);
+  color: $greycolor;
+}
+
+.product-of-week__price {
+  @include font-info(17px, bold, 24px);
+  color: $greycolor;
+}
+
+.product-of-week__order {
+  @include font-info(17px, bold, 20px);
+  color: $greycolor;
+  text-transform: uppercase;
+  padding: 10px 80px;
+}

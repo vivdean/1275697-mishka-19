@@ -1,0 +1,12 @@
+.main-nav__link {
+  @include font-info (17px, bold, 24px);
+  display: inline-block;
+  vertical-align: middle;
+  color: $primary-color;
+  padding: 15px;
+  text-align: left;
+}
+
+.main-nav__list {
+  @include reset-list;
+}

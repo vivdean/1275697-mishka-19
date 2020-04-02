@@ -1,0 +1,14 @@
+.catalog-item__text {
+  @include font-info(17px, bold, 24px);
+  color: $primary-color;
+}
+
+.catalog-item__desc {
+  @include font-info(13px, normal, 30px);
+  color: $greycolor;
+}
+
+.catalog-item__price {
+  @include font-info(15px, bold, 24px);
+}
+

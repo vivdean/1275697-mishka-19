@@ -1,0 +1,11 @@
+.about-us__title {
+  @include font-info(25px, bold, 30px)
+}
+
+.about-us__list {
+  @include reset-list;
+}
+
+.about-us__item {
+  @include font-info(17px, bold, 20px)
+}
