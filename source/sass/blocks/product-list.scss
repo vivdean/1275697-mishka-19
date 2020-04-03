@@ -1,0 +1,20 @@
+.product-list {
+  @include reset-list;
+}
+
+.product-list__link {
+  @include font-info(19px, 700, 24px);
+  padding: 30px;
+  color: $white;
+}
+
+.product-list__item {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  color: $white;
+  background-color: $darkblue;
+
+  &--furniture {
+    background-color: $aquablue;
+  }
+}

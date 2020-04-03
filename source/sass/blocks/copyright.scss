@@ -1,0 +1,10 @@
+.copyright {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+}
+
+.copyright__text {
+  @include font-info(19px, 700, 18px);
+}

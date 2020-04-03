@@ -1,0 +1,30 @@
+.catalog-list {
+  @include padding;
+  margin-top: 30px;
+}
+
+.catalog-item {
+  border: 1px solid $bordergrey;
+  margin-bottom: 30px;
+}
+
+.catalog-item__text {
+  @include font-info(17px, 700, 24px);
+  color: $black;
+}
+
+.catalog-item__desc {
+  @include font-info(13px, 400, 30px);
+  color: $grey;
+  padding-bottom: 15px;
+  border-bottom: 1px solid $bordergrey;
+}
+
+.catalog-item__price {
+  @include font-info(15px, 700, 24px);
+  margin-bottom: 0;
+}
+
+.catalog-item__wrapper {
+  padding: 25px;
+}

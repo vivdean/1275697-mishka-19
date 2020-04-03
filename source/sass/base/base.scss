@@ -1,0 +1,19 @@
+body {
+  width: 320px;
+  color: $black;
+  font-family: $font, "Arial", sans-serif;
+  background-color: $white;
+  font-size: 15px;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
