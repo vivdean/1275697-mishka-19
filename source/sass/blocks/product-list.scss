@@ -3,18 +3,18 @@
 }
 
 .product-list__link {
-  @include font-info(19px, bold, 24px);
-  padding: 20px;
-  color: $whitecolor;
+  @include font-info(19px, 700, 24px);
+  padding: 30px;
+  color: $white;
 }
 
 .product-list__item {
-  width: 320px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  color: $whitecolor;
-  background-color: $darkbluecolor;
-    &--furniture {
-  background-color: $bluecolor;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  color: $white;
+  background-color: $darkblue;
+
+  &--furniture {
+    background-color: $aquablue;
   }
 }

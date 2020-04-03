@@ -1,5 +1,9 @@
+.about-us {
+  @include padding;
+}
+
 .about-us__title {
-  @include font-info(25px, bold, 30px)
+  @include font-info(25px, 700, 30px);
 }
 
 .about-us__list {
@@ -7,5 +11,7 @@
 }
 
 .about-us__item {
-  @include font-info(17px, bold, 20px)
+  @include font-info(17px, 700, 20px);
+  padding-top: 30px;
+  padding-bottom: 20px;
 }

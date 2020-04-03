@@ -1,19 +1,16 @@
 .banner {
-  background-color: $bg-greycolor;
-  width: 322px;
-}
+  background-color: $bg-grey;
 
-.banner--index {
-  background-image: url("../../img/hero-mobile@1x.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 373px;
+  &--index {
+    background-image: url("../img/hero-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 }
 
 .banner__title {
-  font-size: 27px;
-  font-weight: bold;
-  line-height: 30px;
-  padding: 75px 40px;
+  @include font-info(27px, 700, 30px);
+  padding: 55px 40px;
   text-align: center;
+  margin: 0;
 }

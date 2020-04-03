@@ -1,26 +1,44 @@
+.product-of-week {
+  @include padding;
+}
+
 .product-of-week__title {
-  @include font-info(25px, bold, 30px);
+  @include font-info(25px, 700, 30px);
+  margin-bottom: 0;
 }
 
 .product-of-week__caption {
-  @include font-info(17px, bold, 20px);
-  color: $bluecolor;
+  @include font-info(17px, 700, 20px);
+  color: $aquablue;
+  text-transform: uppercase;
 }
 
 .product-of-week__text,
 .product-of-week__item {
-  @include font-info(15px, normal, 24px);
-  color: $greycolor;
+  @include font-info(15px, 400, 24px);
+  color: $grey;
+}
+
+.product-of-week__list {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+}
+
+.product-of-week__item {
+  border-bottom: 1px solid $bordergrey;
+  padding: 5px;
 }
 
 .product-of-week__price {
-  @include font-info(17px, bold, 24px);
-  color: $greycolor;
+  @include font-info(17px, 700, 24px);
+  color: $grey;
+  text-align: center;
 }
 
 .product-of-week__order {
-  @include font-info(17px, bold, 20px);
-  color: $greycolor;
+  @include font-info(17px, 700, 20px);
+  color: $grey;
   text-transform: uppercase;
   padding: 10px 80px;
 }

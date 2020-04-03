@@ -4,8 +4,13 @@
   line-height: $line-height;
 }
 
-@mixin reset-list{
+@mixin reset-list {
   list-style: none;
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin padding {
+  padding-left: 30px;
+  padding-right: 30px;
 }
