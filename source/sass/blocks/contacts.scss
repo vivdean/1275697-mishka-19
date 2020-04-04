@@ -1,0 +1,50 @@
+.contacts {
+  @include container;
+  margin-bottom: 40px;
+}
+
+.contacts__title {
+  @include font-info(18px, 700, 30px);
+}
+
+.contacts__content {
+  @include font-info(15px, 400, 30px);
+  color: $grey;
+}
+
+.contacts__link {
+  color: $grey;
+  border-bottom: 1px solid $aquablue;
+  padding-bottom: 5px;
+
+  &:hover {
+    color: $hoverdarkblue;
+  }
+
+  &:active {
+    color: $downblue;
+  }
+}
+
+.contacts__address {
+  vertical-align: top;
+}
+
+.contacts__item {
+  width: 70px;
+}
+
+.contacts__feedback {
+  @include font-info(17px, 700, 20px);
+  padding: 10px 55px;
+}
+
+.contacts__wrap {
+  @include container;
+  margin-top: 20px;
+}
+
+.contacts__map {
+  width: 100%;
+  border: 0;
+}

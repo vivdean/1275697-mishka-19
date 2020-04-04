@@ -1,0 +1,7 @@
+.order-guide {
+  @include container;
+  @include font-info(13px, 400, 24px);
+  color: $grey;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}

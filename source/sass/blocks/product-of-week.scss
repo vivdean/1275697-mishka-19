@@ -1,5 +1,5 @@
 .product-of-week {
-  @include padding;
+  @include container;
 }
 
 .product-of-week__title {
@@ -38,7 +38,14 @@
 
 .product-of-week__order {
   @include font-info(17px, 700, 20px);
-  color: $grey;
-  text-transform: uppercase;
   padding: 10px 80px;
+
+  &:hover {
+    color: $white;
+    background-color: $grey;
+  }
+
+  &:active {
+    color: $downwhite;
+  }
 }

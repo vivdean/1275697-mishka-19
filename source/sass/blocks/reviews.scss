@@ -1,0 +1,56 @@
+.reviews {
+  @include container;
+  position: relative;
+}
+
+.reviews__item {
+  margin: 30px 0;
+  margin-bottom: 90px;
+}
+
+.reviews__title {
+  @include font-info(25px, 700, 30px);
+}
+
+.reviews__text {
+  @include font-info(15px, 400, 30px);
+  color: $grey;
+}
+
+.reviews__author-name {
+  @include font-info(17px, 700, 24px);
+  font-style: normal;
+}
+
+.reviews__author-nickname {
+  @include font-info(17px, 400, 30px);
+  color: $grey;
+}
+
+.reviews__button {
+  box-sizing: border-box;
+  position: absolute;
+  width: 130px;
+  height: 50px;
+  border: 1px solid $bg-grey;
+  bottom: 70px;
+  cursor: pointer;
+  background-color: $white;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &--prev {
+    left: 30px;
+    background-image: url("../img/icon-left-arrow.svg");
+  }
+
+  &--next {
+    right: 30px;
+    background-image: url("../img/icon-right-arrow.svg");
+  }
+}
+
+.reviews__write-button {
+  @include font-info(17px, 700, 20px);
+  padding: 10px 80px;
+}

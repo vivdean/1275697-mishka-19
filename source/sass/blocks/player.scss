@@ -1,0 +1,33 @@
+.player {
+  width: 260px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  border: 1px solid $bordergrey;
+
+  &:hover {
+    box-shadow: 0 6px 10px 0 $downblack;
+
+    &:active {
+      box-shadow: 0 3px 5px 0 $downblack;
+    }
+  }
+}
+
+.player__title {
+  @include font-info(17px, 700, 24px);
+  padding-left: 90px;
+}
+
+.player__text {
+  @include font-info(13px, 400, 24px);
+  color: $grey;
+}
+
+.player__order {
+  @include font-info(17px, 700, 20px);
+  padding: 10px 25px;
+}
+
+.player__desc {
+  padding: 25px 30px;
+}

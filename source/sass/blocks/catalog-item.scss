@@ -1,16 +1,27 @@
-.catalog-list {
-  @include padding;
-  margin-top: 30px;
-}
-
 .catalog-item {
   border: 1px solid $bordergrey;
   margin-bottom: 30px;
+
+  &:hover {
+    box-shadow: 0 6px 10px 0 $downblack;
+
+    &:active {
+      box-shadow: 0 3px 5px 0 $downblack;
+    }
+  }
 }
 
 .catalog-item__text {
   @include font-info(17px, 700, 24px);
   color: $black;
+
+  &:hover {
+    color: $hoverblack;
+
+    &:active {
+      color: $downblack;
+    }
+  }
 }
 
 .catalog-item__desc {
