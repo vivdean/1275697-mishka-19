@@ -4,10 +4,10 @@
 
   &:hover {
     box-shadow: 0 6px 10px 0 $downblack;
+  }
 
-    &:active {
-      box-shadow: 0 3px 5px 0 $downblack;
-    }
+  &:active {
+    box-shadow: 0 3px 5px 0 $downblack;
   }
 }
 
@@ -17,10 +17,10 @@
 
   &:hover {
     color: $hoverblack;
+  }
 
-    &:active {
-      color: $downblack;
-    }
+  &:active {
+    color: $downblack;
   }
 }
 
