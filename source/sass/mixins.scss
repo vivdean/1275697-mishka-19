@@ -10,7 +10,8 @@
   padding: 0;
 }
 
-@mixin padding {
-  padding-left: 30px;
-  padding-right: 30px;
+@mixin container {
+  width: 260px;
+  margin: 0 auto;
+  padding: 0 30px;
 }

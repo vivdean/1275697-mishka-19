@@ -4,6 +4,14 @@
   vertical-align: middle;
   color: $black;
   padding: 20px;
+
+  &:hover {
+    color: $hoverblack;
+  }
+
+  &:active {
+    color: $downblack;
+  }
 }
 
 .main-nav__list {

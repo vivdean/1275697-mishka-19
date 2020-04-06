@@ -6,15 +6,29 @@
   @include font-info(19px, 700, 24px);
   padding: 30px;
   color: $white;
+  display: block;
+
+  &:active {
+    color: $downwhite;
+  }
 }
 
 .product-list__item {
-  padding-top: 30px;
-  padding-bottom: 30px;
-  color: $white;
-  background-color: $darkblue;
+  &--toys {
+    background-color: $darkblue;
+
+    &:hover,
+    &:active {
+      background-color: $hoverdarkblue;
+    }
+  }
 
   &--furniture {
     background-color: $aquablue;
+
+    &:hover,
+    &:active {
+      background-color: $hoveraquablue;
+    }
   }
 }

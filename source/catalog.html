@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Мишка</title>
     <link href="css/style.css" rel="stylesheet">
   </head>
@@ -22,7 +23,7 @@
         </svg>
       </a>
       <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
+        <button class="main-nav__toggle visually-hidden" type="button">Открыть меню</button>
         <ul class="main-nav__list">
           <li class="main-nav__item">
             <a class="main-nav__link" href="catalog.html">Каталог товаров</a>
@@ -88,8 +89,10 @@
       <div class="player">
         <h3 class="player__title">Процесс производства</h3>
         <img class="player__image" src="img/video-mobile@1x.jpg" width="260" height="150" alt="Процесс производства">
-        <p class="player__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-        <a class="player__order button" href="#">Сделать заказ</a>
+        <div class="player__desc">
+          <p class="player__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+          <a class="player__order button" href="#">Сделать заказ</a>
+        </div>
       </div>
     </main>
 
