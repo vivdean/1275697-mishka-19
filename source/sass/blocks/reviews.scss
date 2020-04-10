@@ -54,3 +54,61 @@
   @include font-info(17px, 700, 20px);
   padding: 10px 80px;
 }
+
+@media (min-width: $tablet-width) {
+  .reviews__title {
+    @include font-info(43px, 700, 50px);
+  }
+
+  .reviews__text {
+    @include font-info(17px, 400, 30px);
+  }
+
+  .reviews {
+    display: flex;
+    background-image: url("../img/review@1x.jpg");
+    background-position: left center;
+    background-repeat: no-repeat;
+  }
+
+  .reviews__wrap-buttons {
+    position: relative;
+    width: 175px;
+    margin-left: -100px;
+  }
+
+  .reviews__wrap-text {
+    width: 100%;
+  }
+
+  .reviews__write-button {
+    padding-right: 0;
+    padding-left: 0;
+    width: 100%;
+    margin-top: 40px;
+  }
+
+  .reviews__button {
+    width: 50px;
+    border: none;
+
+    &--prev {
+      left: 5px;
+    }
+
+    &--next {
+      right: 5px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .reviews {
+    box-sizing: border-box;
+    padding: 0;
+  }
+
+  .reviews__wrap-text {
+    padding-left: 200px;
+  }
+}

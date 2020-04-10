@@ -31,3 +31,59 @@
 .player__desc {
   padding: 25px 30px;
 }
+
+@media (min-width: $tablet-width) {
+  .player {
+    @include container;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .player__image {
+    order: -1;
+  }
+
+  .player__order {
+    width: 100%;
+  }
+
+  .player__desc {
+    padding-top: 0;
+  }
+
+  .player__title {
+    @include font-info(20px, 700, 24px);
+    order: 0;
+  }
+
+  .player__text {
+    @include font-info(15px, 400, 30px);
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .player {
+    @include container;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: relative;
+    height: 455px;
+  }
+
+  .player__desc {
+    width: 230px;
+    order: 2;
+    margin-left: auto;
+  }
+
+  .player__title {
+    order: 1;
+    margin-left: auto;
+    margin-top: 80px;
+  }
+
+  .player__image {
+    height: 455px;
+  }
+}

@@ -1,6 +1,26 @@
 .page-footer {
   background-color: $bg-grey;
-  display: flex;
-  flex-direction: column;
   margin-top: 30px;
+}
+
+.page-footer__logo {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .page-footer__logo {
+    display: block;
+  }
+
+  .page-footer__wrapper {
+    @include container;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .page-footer {
+    padding-top: 50px;
+    min-height: 100px;
+  }
 }

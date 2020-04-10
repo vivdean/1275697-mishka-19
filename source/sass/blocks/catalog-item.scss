@@ -39,3 +39,35 @@
 .catalog-item__wrapper {
   padding: 25px;
 }
+
+@media (min-width: $tablet-width) {
+  .catalog-item,
+  .catalog-item__price-wrap {
+    display: flex;
+  }
+
+  .catalog-item__wrapper {
+    width: 50%;
+    box-sizing: border-box;
+  }
+
+  .catalog-item__link {
+    width: 50%;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .catalog-item {
+    flex-direction: column;
+    width: 335px;
+
+    &:not(:nth-child(3n+3)) {
+      margin-right: 50px;
+    }
+  }
+
+  .catalog-item__wrapper,
+  .catalog-item__link {
+    width: 100%;
+  }
+}

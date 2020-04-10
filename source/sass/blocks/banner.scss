@@ -15,3 +15,40 @@
   text-align: center;
   margin: 0;
 }
+
+@media (min-width: $tablet-width) {
+  .banner {
+    min-height: 250px;
+    border-top: 1px solid $bordergrey;
+
+    &--index {
+      background-image: url("../img/hero-tablet@1x.jpg");
+      background-repeat: no-repeat;
+      background-position: top center;
+      min-height: 746px;
+    }
+  }
+
+  .banner__title {
+    @include font-title-tablet;
+    padding-top: 100px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .banner {
+    min-height: 250px;
+
+    &--index {
+      background-image: url("../img/hero-desktop@1x.jpg");
+      background-repeat: no-repeat;
+      background-position: top center;
+      min-height: 746px;
+    }
+  }
+
+  .banner__title {
+    @include font-title-desktop;
+    padding-top: 100px;
+  }
+}
