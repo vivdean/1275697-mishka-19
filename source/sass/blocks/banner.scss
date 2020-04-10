@@ -27,13 +27,13 @@
       min-height: 746px;
 
       .banner__title {
-        @include font-title;
         padding: 160px;
       }
     }
   }
 
   .banner__title {
+    @include font-title;
     padding-top: 100px;
   }
 }
