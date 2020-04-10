@@ -14,4 +14,31 @@
   width: 260px;
   margin: 0 auto;
   padding: 0 30px;
+
+  @media (min-width: $tablet-width) {
+    width: 672px;
+    padding: 0 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1050px;
+  }
+}
+
+@mixin font-title {
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 30px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 43px;
+    font-weight: 700;
+    line-height: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 53px;
+    font-weight: 700;
+    line-height: 57px;
+  }
 }

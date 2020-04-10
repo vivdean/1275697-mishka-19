@@ -3,7 +3,7 @@
 }
 
 .about-us__title {
-  @include font-info(25px, 700, 30px);
+  @include font-title;
 }
 
 .about-us__list {
@@ -14,4 +14,29 @@
   @include font-info(17px, 700, 20px);
   padding-top: 30px;
   padding-bottom: 20px;
+}
+
+@media (min-width: $tablet-width) {
+  .about-us__item {
+    @include font-info(20px, 700, 22px);
+    padding-top: 30px;
+    padding-bottom: 20px;
+  }
+
+  .about-us__wrapper {
+    display: flex;
+    margin-bottom: 50px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .about-us {
+    margin: 0 auto;
+    width: 650px;
+  }
+
+  .about-us__list {
+    width: 300px;
+    margin-right: 30px;
+  }
 }

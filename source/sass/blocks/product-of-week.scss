@@ -3,7 +3,7 @@
 }
 
 .product-of-week__title {
-  @include font-info(25px, 700, 30px);
+  @include font-title;
   margin-bottom: 0;
 }
 
@@ -22,7 +22,7 @@
 .product-of-week__list {
   width: 100%;
   border-collapse: collapse;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 .product-of-week__item {
@@ -38,7 +38,8 @@
 
 .product-of-week__order {
   @include font-info(17px, 700, 20px);
-  padding: 10px 80px;
+  padding: 10px 0;
+  width: 100%;
 
   &:hover {
     color: $white;
@@ -47,5 +48,78 @@
 
   &:active {
     color: $downwhite;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .product-of-week {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .product-of-week__wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: relative;
+  }
+
+  .product-of-week__wrap-info,
+  .product-of-week__wrap-order {
+    width: 300px;
+  }
+
+  .product-of-week__img {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .product-of-week__wrapper-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 0;
+  }
+
+  .product-of-week__caption {
+    @include font-info(17px, 700, 17px);
+    text-align: center;
+    width: 70px;
+    padding-right: 30px;
+  }
+
+  .product-of-week__title {
+    margin: 0;
+  }
+
+  .product-of-week__text {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .product-of-week__wrapper-title {
+    z-index: 2;
+    padding-top: 70px;
+    justify-content: start;
+  }
+
+  .product-of-week__wrapper {
+    padding-left: 200px;
+  }
+
+  .product-of-week__title {
+    margin: 0;
+  }
+
+  .product-of-week__img {
+    right: 260px;
+    top: -100px;
+  }
+
+  .product-of-week__caption {
+    order: -1;
+    margin: 0 45px;
   }
 }

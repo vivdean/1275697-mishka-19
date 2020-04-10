@@ -4,7 +4,9 @@
 
 .product-list__link {
   @include font-info(19px, 700, 24px);
-  padding: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
   color: $white;
   display: block;
 
@@ -30,5 +32,17 @@
     &:active {
       background-color: $hoveraquablue;
     }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .product-list {
+    @include container;
+    display: flex;
+    margin-top: -108px;
+  }
+
+  .product-list__item {
+    width: 50%;
   }
 }
