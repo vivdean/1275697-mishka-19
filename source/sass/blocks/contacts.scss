@@ -58,10 +58,6 @@
     margin-top: 30px;
   }
 
-  .contacts__title {
-    @include font-title-tablet;
-  }
-
   .contacts__item {
     &:nth-child(3) {
       margin-left: 70px;
@@ -102,9 +98,5 @@
   .contacts__map {
     order: 3;
     width: 50%;
-  }
-
-  .contacts__title {
-    @include font-title-desktop;
   }
 }

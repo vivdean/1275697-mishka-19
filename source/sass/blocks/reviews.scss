@@ -9,7 +9,7 @@
 }
 
 .reviews__title {
-  @include font-info(25px, 700, 30px);
+  @include font-title;
 }
 
 .reviews__text {
@@ -19,7 +19,6 @@
 
 .reviews__author-name {
   @include font-info(17px, 700, 24px);
-  font-style: normal;
 }
 
 .reviews__author-nickname {
@@ -56,10 +55,6 @@
 }
 
 @media (min-width: $tablet-width) {
-  .reviews__title {
-    @include font-info(43px, 700, 50px);
-  }
-
   .reviews__text {
     @include font-info(17px, 400, 30px);
   }

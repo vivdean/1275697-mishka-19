@@ -63,9 +63,6 @@
 
 @media (min-width: $desktop-width) {
   .player {
-    @include container;
-    display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
     position: relative;
     height: 455px;
