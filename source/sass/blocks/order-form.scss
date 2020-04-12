@@ -1,8 +1,5 @@
-.order-form {
-  @include container;
-}
-
 .order-form__item {
+  @include container;
   border: none;
   padding: 20px 0;
 
@@ -67,4 +64,152 @@
   padding: 10px 45px;
   margin-top: 20px;
   margin-bottom: 40px;
+}
+
+@media (min-width: $tablet-width) {
+  .order-form__title {
+    position: relative;
+    left: 0;
+
+    &--type,
+    &--tel,
+    &--email {
+      top: 35px;
+    }
+
+    &--color {
+      top: 80px;
+    }
+
+    &--user-info {
+      top: 50px;
+    }
+
+    &--letter {
+      top: -110px;
+    }
+  }
+
+  .order-form__item {
+    &--user-contacts,
+    &--color {
+      padding: 30px 0;
+    }
+
+    &--type,
+    &--user-info {
+      padding-bottom: 50px;
+    }
+  }
+
+  .order-form__list {
+    &--type,
+    &--user-info {
+      margin-left: 170px;
+    }
+
+    &--color {
+      display: flex;
+      flex-wrap: wrap;
+      width: 400px;
+      justify-content: flex-start;
+      margin-left: 170px;
+    }
+  }
+
+  .order-form__wrapper {
+    background-color: $bg-grey;
+  }
+
+  .order-form__input {
+    &--tel,
+    &--email {
+      margin-left: 170px;
+      background-color: $bg-grey;
+      width: 500px;
+    }
+
+    &--textarea {
+      margin-left: 130px;
+      width: 500px;
+    }
+
+    &--name {
+      width: 425px;
+    }
+
+    &--surname,
+    &--patronym {
+      width: 380px;
+    }
+  }
+
+  .order-form__label {
+    margin-right: 30px;
+  }
+
+  .order-form__legend-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .order-form__button {
+    order: -1;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .order-form__item {
+    width: 1000px;
+    margin: 0 auto;
+  }
+
+  .order-form__title {
+    left: 50px;
+
+    &--tel,
+    &--email {
+      top: 0;
+    }
+  }
+
+  .order-form__list {
+    &--color {
+      width: 800px;
+    }
+  }
+
+  .order-form__option {
+    &--checkbox {
+      padding-right: 70px;
+    }
+  }
+
+  .order-form__input {
+    &--textarea,
+    &--tel {
+      margin-left: 130px;
+      width: 690px;
+    }
+
+    &--email {
+      margin-left: 105px;
+      width: 690px;
+    }
+
+    &--name {
+      width: 600px;
+    }
+
+    &--surname,
+    &--patronym {
+      width: 560px;
+    }
+  }
+
+  .order-form__legend-wrap {
+    width: 700px;
+    margin: 0 auto;
+  }
 }
