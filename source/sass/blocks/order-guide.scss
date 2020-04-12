@@ -4,4 +4,12 @@
   color: $grey;
   margin-bottom: 30px;
   margin-top: 30px;
+
+  @media (min-width: $tablet-width) {
+    @include font-info(17px, 400, 30px);
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 672px;
+  }
 }
