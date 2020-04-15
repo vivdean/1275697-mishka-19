@@ -64,6 +64,11 @@
     background-image: url("../img/review@1x.jpg");
     background-position: left center;
     background-repeat: no-repeat;
+    background-size: 350px auto;
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../img/review@2x.jpg");
+    }
   }
 
   .reviews__wrap-buttons {
@@ -93,6 +98,14 @@
 
     &--next {
       right: 5px;
+    }
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
     }
   }
 }

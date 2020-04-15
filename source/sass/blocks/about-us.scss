@@ -12,14 +12,65 @@
 
 .about-us__item {
   @include font-info(17px, 700, 20px);
-  padding-top: 30px;
+  padding-top: 70px;
   padding-bottom: 20px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 55px;
+    height: 40px;
+    background-position: left;
+    background-repeat: no-repeat;
+  }
+
+  &--flower {
+    &::before {
+      background-image: url("../img/icon-feature-flower.svg");
+    }
+  }
+
+  &--money {
+    &::before {
+      background-image: url("../img/icon-feature-money.svg");
+    }
+  }
+
+  &--like {
+    &::before {
+      background-image: url("../img/icon-feature-heart.svg");
+    }
+  }
+
+  &--clew {
+    &::before {
+      background-image: url("../img/icon-feature-ball.svg");
+    }
+  }
+
+  &--rocket {
+    &::before {
+      background-image: url("../img/icon-feature-rocket.svg");
+    }
+  }
+
+  &--box {
+    &::before {
+      background-image: url("../img/icon-feature-gift.svg");
+    }
+  }
 }
 
 @media (min-width: $tablet-width) {
+  .about-us {
+    margin-top: 100px;
+  }
+
   .about-us__item {
     @include font-info(20px, 700, 22px);
-    padding-top: 30px;
     padding-bottom: 20px;
   }
 
@@ -33,6 +84,7 @@
   .about-us {
     margin: 0 auto;
     width: 650px;
+    margin-top: 200px;
   }
 
   .about-us__list {

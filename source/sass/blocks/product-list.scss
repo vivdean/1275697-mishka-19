@@ -16,12 +16,29 @@
 }
 
 .product-list__item {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+  }
+
   &--toys {
     background-color: $darkblue;
 
     &:hover,
     &:active {
       background-color: $hoverdarkblue;
+    }
+
+    &::after {
+      background-image: url("../img/icon-toy.svg");
     }
   }
 
@@ -31,6 +48,10 @@
     &:hover,
     &:active {
       background-color: $hoveraquablue;
+    }
+
+    &::after {
+      background-image: url("../img/icon-interior.svg");
     }
   }
 }
