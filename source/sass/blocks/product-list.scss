@@ -9,28 +9,68 @@
   padding-left: 30px;
   color: $white;
   display: block;
+  position: relative;
+  box-sizing: border-box;
+
+  &:hover {
+    top: -5px;
+    left: 0;
+
+    &::after {
+      opacity: 0.7;
+    }
+  }
 
   &:active {
     color: $downwhite;
-  }
-}
 
-.product-list__item {
+    &::after {
+      opacity: 0.3;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+  }
+
   &--toys {
     background-color: $darkblue;
 
-    &:hover,
+    &:hover {
+      box-shadow: 0 5px 0 $hoverdarkblue;
+      background-color: $hoverdarkblue;
+    }
+
     &:active {
       background-color: $hoverdarkblue;
+    }
+
+    &::after {
+      background-image: url("../img/icon-toy.svg");
     }
   }
 
   &--furniture {
     background-color: $aquablue;
 
-    &:hover,
+    &:hover {
+      box-shadow: 0 5px 0 $hoveraquablue;
+      background-color: $hoveraquablue;
+    }
+
     &:active {
       background-color: $hoveraquablue;
+    }
+
+    &::after {
+      background-image: url("../img/icon-interior.svg");
     }
   }
 }

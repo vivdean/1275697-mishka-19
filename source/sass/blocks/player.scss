@@ -1,8 +1,9 @@
 .player {
-  width: 260px;
+  width: 262px;
   box-sizing: border-box;
   margin: 0 auto;
   border: 1px solid $bordergrey;
+  position: relative;
 
   &:hover {
     box-shadow: 0 6px 10px 0 $downblack;
@@ -13,9 +14,42 @@
   }
 }
 
+.player__button {
+  position: absolute;
+  top: 25%;
+  left: 30%;
+  cursor: pointer;
+  background-image: url("../img/icon-play.svg");
+  background-color: transparent;
+  border: none;
+  width: 101px;
+  height: 77px;
+  transition: 0.3s;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+
+  &:active {
+    transform: scale(0.8);
+    opacity: 0.3;
+  }
+}
+
 .player__title {
   @include font-info(17px, 700, 24px);
   padding-left: 90px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 5px;
+    left: 30px;
+    width: 32px;
+    height: 32px;
+    background-image: url("../img/icon-video.svg");
+  }
 }
 
 .player__text {
@@ -25,7 +59,7 @@
 
 .player__order {
   @include font-info(17px, 700, 20px);
-  padding: 10px 25px;
+  padding: 15px 25px;
 }
 
 .player__desc {
@@ -34,26 +68,42 @@
 
 @media (min-width: $tablet-width) {
   .player {
-    @include container;
+    width: 672px;
     display: flex;
     flex-direction: column;
   }
 
   .player__image {
-    order: -1;
+    order: 1;
   }
 
   .player__order {
     width: 100%;
+    box-sizing: border-box;
   }
 
   .player__desc {
+    width: 590px;
+    margin: 0 auto;
     padding-top: 0;
+    order: 3;
   }
 
   .player__title {
     @include font-info(20px, 700, 24px);
-    order: 0;
+    order: 2;
+    padding-left: 100px;
+    margin-top: 40px;
+
+    &::before {
+      left: 40px;
+      top: -5px;
+    }
+  }
+
+  .player__button {
+    top: 25%;
+    left: 40%;
   }
 
   .player__text {
@@ -63,6 +113,7 @@
 
 @media (min-width: $desktop-width) {
   .player {
+    width: 1050px;
     flex-wrap: wrap;
     position: relative;
     height: 455px;
@@ -76,11 +127,24 @@
 
   .player__title {
     order: 1;
-    margin-left: auto;
-    margin-top: 80px;
+    margin-top: 30px;
+    margin-left: 50px;
+    padding: 0;
+    padding-top: 50px;
+    width: 150px;
+
+    &::before {
+      left: 0;
+      top: 0;
+    }
   }
 
-  .player__image {
-    height: 455px;
+  .player__button {
+    top: 40%;
+    left: 25%;
+  }
+
+  .player__text {
+    margin-bottom: 50px;
   }
 }
