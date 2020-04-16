@@ -12,16 +12,27 @@
   &:active {
     box-shadow: 0 3px 5px 0 $downblack;
   }
+}
 
-  &::after {
-    content: "";
-    position: absolute;
-    transform: translate(-50%, -50%);
-    left: 50%;
-    top: 33%;
-    background-image: url("../img/icon-play.svg");
-    width: 101px;
-    height: 77px;
+.player__button {
+  position: absolute;
+  top: 25%;
+  left: 30%;
+  cursor: pointer;
+  background-image: url("../img/icon-play.svg");
+  background-color: transparent;
+  border: none;
+  width: 101px;
+  height: 77px;
+  transition: 0.3s;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+
+  &:active {
+    transform: scale(0.8);
+    opacity: 0.3;
   }
 }
 
@@ -90,6 +101,11 @@
     }
   }
 
+  .player__button {
+    top: 25%;
+    left: 40%;
+  }
+
   .player__text {
     @include font-info(15px, 400, 30px);
   }
@@ -101,11 +117,6 @@
     flex-wrap: wrap;
     position: relative;
     height: 455px;
-
-    &::after {
-      left: 33%;
-      top: 50%;
-    }
   }
 
   .player__desc {
@@ -126,6 +137,11 @@
       left: 0;
       top: 0;
     }
+  }
+
+  .player__button {
+    top: 40%;
+    left: 25%;
   }
 
   .player__text {
