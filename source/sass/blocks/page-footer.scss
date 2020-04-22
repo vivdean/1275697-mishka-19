@@ -5,6 +5,14 @@
 
 .page-footer__logo {
   display: none;
+
+  &:hover .page-footer__icon {
+    fill: $hoverdarkblue;
+  }
+
+  &:active .page-footer__icon {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: $tablet-width) {

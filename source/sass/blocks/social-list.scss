@@ -12,3 +12,17 @@
 .social-list__item {
   margin-right: 30px;
 }
+
+.social-list__icon {
+  fill: $darkgrey;
+}
+
+.social-list__link {
+  &:hover .social-list__icon {
+    fill: $hoverdarkblue;
+  }
+
+  &:active .social-list__icon {
+    opacity: 0.3;
+  }
+}

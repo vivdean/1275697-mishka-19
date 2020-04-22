@@ -3,7 +3,8 @@
   display: inline-block;
   vertical-align: middle;
   color: $black;
-  padding: 20px;
+  padding-top: 23px;
+  padding-bottom: 23px;
   padding-left: 40px;
 
   &:hover {
@@ -12,6 +13,17 @@
 
   &:active {
     color: $downblack;
+  }
+
+  &:hover .main-nav__cart-icon,
+  &:hover .main-nav__search-icon {
+    fill: $aquablue;
+  }
+
+  &:active .main-nav__search-icon,
+  &:active .main-nav__cart-icon {
+    fill: $aquablue;
+    opacity: 0.3;
   }
 
   &--search,
@@ -37,7 +49,7 @@
 
 .main-nav__logo {
   align-self: center;
-  padding: 15px 0;
+  padding: 20px 0;
 }
 
 .main-nav__text,
@@ -45,17 +57,10 @@
   display: none;
 }
 
-.main-nav__search-icon,
-.main-nav__cart-icon {
+.main-nav__cart-icon,
+.main-nav__search-icon {
   margin-right: 20px;
-
-  &:hover path {
-    fill: $aquablue;
-  }
-
-  &:active path {
-    opacity: 0.3;
-  }
+  fill: $bordergrey;
 }
 
 .main-nav__toggle {
@@ -113,7 +118,6 @@
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    max-height: 90px;
   }
 
   .main-nav__list--group-sale-arrival {
@@ -164,7 +168,6 @@
   .main-nav__link--cart {
     margin-left: 30px;
     padding-right: 0;
-    padding-bottom: 30px;
   }
 
   .main-nav__link--search {
@@ -224,7 +227,6 @@
   .main-nav__link--catalog,
   .main-nav__link--order {
     padding-right: 40px;
-    padding-bottom: 30px;
   }
 
   .main-nav__link--arrival {

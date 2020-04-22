@@ -1,0 +1,123 @@
+.modal__content {
+  display: none;
+  width: 320px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: $white;
+  min-height: 336px;
+  border: solid 1px $bordergrey;
+  box-shadow: 0 5px 10px 0 $downblack;
+  z-index: 3;
+  padding: 40px 30px;
+  box-sizing: border-box;
+  opacity: 1;
+}
+
+.modal__content--show {
+  display: block;
+}
+
+.modal__title {
+  @include font-info(25px, 700, 30px);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.modal__text {
+  @include font-info(15px, 400, 30px);
+  text-align: center;
+}
+
+.modal__list {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.modal__item {
+  position: relative;
+  margin-right: 87px;
+  margin-top: 0;
+}
+
+.modal__input {
+  & + label::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80px;
+    border: 2px solid $bordergrey;
+    text-align: center;
+    vertical-align: middle;
+    padding: 15px 0;
+
+    @include font-info(17px, 700, 16px);
+    color: $grey;
+  }
+
+  &--S-size {
+    & + label::before {
+      content: "S";
+    }
+  }
+
+  &--M-size {
+    & + label::before {
+      content: "M";
+    }
+  }
+
+  &--L-size {
+    & + label::before {
+      content: "L";
+      right: 10px;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    & + label::before {
+      border: 2px solid $grey;
+    }
+  }
+
+  &:active,
+  &:checked {
+    & + label::before {
+      border: 2px solid $aquablue;
+    }
+  }
+}
+
+.modal__button {
+  color: $white;
+  background-color: $aquablue;
+  border: none;
+  padding: 20px;
+  margin-top: 60px;
+  text-align: center;
+  width: 100%;
+}
+
+@media (min-width: $tablet-width) {
+  .modal__content {
+    width: 566px;
+    padding: 40px 106px;
+  }
+
+  .modal__input {
+    & + label::before {
+      width: 110px;
+    }
+  }
+
+  .modal__item {
+    margin-right: 118px;
+  }
+
+  .modal__title {
+    @include font-info(30px, 700, 57px);
+    margin-bottom: 0;
+  }
+}

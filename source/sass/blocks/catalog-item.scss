@@ -27,7 +27,6 @@
 .catalog-item__desc {
   @include font-info(13px, 400, 30px);
   color: $grey;
-  padding-bottom: 15px;
 }
 
 .catalog-item__price {
@@ -41,6 +40,26 @@
 
 .catalog-item__price-wrap {
   border-top: 1px solid $bordergrey;
+  position: relative;
+}
+
+.catalog-item__price-icon {
+  position: absolute;
+  top: 15px;
+  right: 0;
+
+  &:hover .catalog-item__cart-icon {
+    fill: $aquablue;
+    opacity: 1;
+  }
+
+  &:active .catalog-item__cart-icon {
+    opacity: 0.3;
+  }
+}
+
+.catalog-item__cart-icon {
+  opacity: 0.2;
 }
 
 @media (min-width: $tablet-width) {
@@ -56,21 +75,19 @@
     flex-direction: column;
   }
 
-  .catalog-item__price-wrap {
-    margin-top: auto;
-    display: flex;
-    justify-content: space-between;
-  }
-
   .catalog-item__link {
     width: 50%;
+  }
+
+  .catalog-item__price-wrap {
+    margin-top: auto;
   }
 }
 
 @media (min-width: $desktop-width) {
   .catalog-item {
     flex-direction: column;
-    width: 335px;
+    margin-bottom: 60px;
 
     &:not(:nth-child(3n+3)) {
       margin-right: 50px;
@@ -80,9 +97,5 @@
   .catalog-item__wrapper,
   .catalog-item__link {
     width: 100%;
-  }
-
-  .catalog-item__price-wrap {
-    margin-top: auto;
   }
 }
