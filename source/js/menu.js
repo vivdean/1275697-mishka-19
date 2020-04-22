@@ -4,5 +4,5 @@
   navMain.classList.remove("main-nav--nojs");
 
   navToggle.addEventListener("click", function() {
-  navMain.classList.toggle("main-nav--hide")
+    navMain.classList.toggle("main-nav--hide");
   });

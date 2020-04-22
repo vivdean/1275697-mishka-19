@@ -12,4 +12,22 @@
 .copyright__text {
   @include font-info(19px, 700, 18px);
   margin-right: 30px;
+
+  &:active {
+    color: $downblack;
+  }
+}
+
+.copyright__icon {
+  fill: $aquablue;
+}
+
+.copyright__link {
+  &:hover .copyright__icon {
+    fill: $hoverdarkblue;
+  }
+
+  &:active .copyright__icon {
+    opacity: 0.3;
+  }
 }

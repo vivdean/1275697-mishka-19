@@ -1,3 +1,11 @@
 .page-header {
   display: block;
+
+  @media (min-width: $tablet-width) {
+    background: linear-gradient(180deg, $white 49%, $bordergrey 1%, $bg-grey 50%);
+
+    &--index {
+      background: linear-gradient(180deg, $white 49%, $bordergrey 1%, $bg-light-grey 50%);
+    }
+  }
 }
