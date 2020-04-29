@@ -6,7 +6,7 @@
     <meta name="format-detection" content="telephone=no">
     <title>HTML Academy: Мишка</title>
     <link href="css/style.css" rel="stylesheet">
-  </head>
+    </head>
   <body>
     <svg style="display: none;">
       <symbol viewBox="-0.8 -0.8 17.6 17.6" id="search-icon">
@@ -81,10 +81,10 @@
             </li>
             <li class="main-nav__item">
               <a class="main-nav__link main-nav__link--cart" href="cart.html">
-                <svg class="main-nav__cart-icon" width="20.294px" height="18.849px">
+                <svg class="main-nav__cart-icon" width="22px" height="19px">
                   <use xlink:href="#cart-icon"></use>
                 </svg>
-                Корзина: пока пуста
+                <span class="main-nav__cart-text">Корзина: пока пуста</span>
               </a>
             </li>
           </ul>
@@ -93,7 +93,7 @@
               <a class="main-nav__link main-nav__link--arrival" href="arrival.html">Новые поступления</a>
             </li>
             <li class="main-nav__item">
-              <a class="main-nav__link" href="sale.html">Распродажа</a>
+              <a class="main-nav__link main-nav__link--sale" href="sale.html">Распродажа</a>
             </li>
           </ul>
           <p class="main-nav__text">Бесплатная доставка по России</p>
@@ -107,7 +107,7 @@
       </div>
       <ul class="product-list">
         <li class="product-list__item">
-          <a class="product-list__link product-list__link--furniture" href="#">Предметы<br> интерьера</a>
+          <a class="product-list__link product-list__link--furniture" href="#"> Предметы<br> интерьера</a>
         </li>
         <li class="product-list__item">
           <a class="product-list__link product-list__link--toys" href="#">Детские<br> игрушки</a>
@@ -152,13 +152,13 @@
         <div class="about-us__wrapper">
           <ul class="about-us__list">
             <li class="about-us__item about-us__item--flower">Экологически<br> чистые материалы</li>
-            <li class="about-us__item about-us__item--money">Скандинавский стиль по российской цене</li>
-            <li class="about-us__item about-us__item--like">Увеличивает лайки на фотографиях</li>
+            <li class="about-us__item about-us__item--money">Скандинавский стиль<br> по российской цене</li>
+            <li class="about-us__item about-us__item--like">Увеличивает лайки на&nbsp;фотографиях</li>
           </ul>
           <ul class="about-us__list">
-            <li class="about-us__item about-us__item--clew">Связано вручную с любовью и умилением</li>
+            <li class="about-us__item about-us__item--clew">Связано вручную с<br>любовью и умилением</li>
             <li class="about-us__item about-us__item--rocket">Поддержка отечественного производителя</li>
-            <li class="about-us__item about-us__item--box">Поставляется в подарочной упаковке</li>
+            <li class="about-us__item about-us__item--box">Поставляется в<br> подарочной упаковке</li>
           </ul>
         </div>
       </section>
@@ -166,7 +166,7 @@
         <div class="reviews__wrap-text">
           <h2 class="reviews__title">Отзывы</h2>
           <blockquote class="reviews__item">
-            <p class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!
+            <p class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и&nbsp;мои фотографии&nbsp;сразу стали более стильными, а также набирают больше лайков!
             </p>
             <p class="reviews__author-name">Анастасия Красильникова</p>
             <p class="reviews__author-nickname">@misssssiskras</p>
@@ -187,10 +187,12 @@
             <li class="contacts__item">e-mail:</li>
             <li class="contacts__item contacts__item--value"><a class="contacts__link" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a></li>
             <li class="contacts__item ">адрес:</li>
-            <li class="contacts__item contacts__item--value">г. Санкт-Петербург,<br> ул. Большая Конюшенная, д. 19/8, офис 101</li>
+            <li class="contacts__item contacts__item--value">г. Санкт-Петербург,<br> ул. Большая Конюшенная,<br> д. 19/8, офис 101</li>
           </ul>
         </div>
-        <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1585946912865!5m2!1sru!2sru" height="457" allowfullscreen></iframe>
+        <div class="contacts__map-wrap">
+          <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1585946912865!5m2!1sru!2sru" height="457" allowfullscreen></iframe>
+        </div>
         <div class="contacts__feedback-wrap">
           <a class="contacts__feedback button" href="#">Напишите нам</a>
         </div>
@@ -212,7 +214,7 @@
             </li>
             <li class="social-list__item">
               <a class="social-list__link social-list__link--facebook" href="https://www.facebook.com/htmlacademy" aria-label="Мы в Фейсбуке">
-                <svg class="social-list__icon" width="14.962px" height="27.718px">
+                <svg class="social-list__icon social-list__icon--facebook" width="14.962px" height="27.718px">
                   <use xlink:href="#facebook"></use>
                 </svg>
               </a>
@@ -225,7 +227,7 @@
               </a>
             </li>
           </ul>
-          <div class="page-footer__copyright copyright">
+          <div class="page-footer__copyright copyright copyright--mobile">
             <b class="copyright__text">Разработано</b>
             <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy">
               <svg class="copyright__icon" width="26.943px" height="34.09px" v>
@@ -261,8 +263,7 @@
         </div>
       </div>
 
-    <script src="js/menu.js"></script>
-    <script src="js/modal.js"></script>
+    <script src="js/script.js"></script>
 
   </body>
 </html>

@@ -10,7 +10,8 @@
   border: solid 1px $bordergrey;
   box-shadow: 0 5px 10px 0 $downblack;
   z-index: 3;
-  padding: 40px 30px;
+  padding: 0 30px;
+  padding-top: 10px;
   box-sizing: border-box;
   opacity: 1;
 }
@@ -23,11 +24,14 @@
   @include font-info(25px, 700, 30px);
   text-transform: uppercase;
   text-align: center;
+  margin-bottom: 10px;
 }
 
 .modal__text {
   @include font-info(15px, 400, 30px);
   text-align: center;
+  margin-top: 10px;
+  margin-bottom: 23px;
 }
 
 .modal__list {
@@ -46,11 +50,11 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 80px;
+    width: 78px;
     border: 2px solid $bordergrey;
     text-align: center;
     vertical-align: middle;
-    padding: 15px 0;
+    padding: 17px 0;
 
     @include font-info(17px, 700, 16px);
     color: $grey;
@@ -71,7 +75,6 @@
   &--L-size {
     & + label::before {
       content: "L";
-      right: 10px;
     }
   }
 
@@ -91,11 +94,12 @@
 }
 
 .modal__button {
+  @include font-info(17px, 700, 16px);
   color: $white;
   background-color: $aquablue;
   border: none;
-  padding: 20px;
-  margin-top: 60px;
+  padding: 17px 30px;
+  margin-top: 70px;
   text-align: center;
   width: 100%;
 }
@@ -103,12 +107,15 @@
 @media (min-width: $tablet-width) {
   .modal__content {
     width: 566px;
-    padding: 40px 106px;
+    padding: 40px 105px;
+    padding-top: 10px;
   }
 
   .modal__input {
     & + label::before {
+      left: 2px;
       width: 110px;
+      padding: 16px 0;
     }
   }
 
@@ -119,5 +126,10 @@
   .modal__title {
     @include font-info(30px, 700, 57px);
     margin-bottom: 0;
+  }
+
+  .modal__text {
+    @include font-info(17px, 400, 30px);
+    margin-top: 12px;
   }
 }

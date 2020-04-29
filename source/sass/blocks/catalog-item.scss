@@ -14,6 +14,7 @@
 .catalog-item__text {
   @include font-info(17px, 700, 24px);
   color: $black;
+  transition: 0.3s;
 
   &:hover {
     color: $hoverblack;
@@ -27,15 +28,23 @@
 .catalog-item__desc {
   @include font-info(13px, 400, 30px);
   color: $grey;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+
+.catalog-item__img {
+  display: block;
 }
 
 .catalog-item__price {
   @include font-info(15px, 700, 24px);
   margin-bottom: 0;
+  margin-top: 20px;
 }
 
 .catalog-item__wrapper {
-  padding: 25px;
+  padding: 27px;
+  padding-right: 25px;
 }
 
 .catalog-item__price-wrap {
@@ -45,8 +54,9 @@
 
 .catalog-item__price-icon {
   position: absolute;
-  top: 15px;
+  top: 20px;
   right: 0;
+  transition: 0.3s;
 
   &:hover .catalog-item__cart-icon {
     fill: $aquablue;
@@ -68,11 +78,16 @@
     display: flex;
   }
 
+  .catalog-item {
+    margin-bottom: 52px;
+  }
+
   .catalog-item__wrapper {
     width: 50%;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
+    padding-top: 24px;
   }
 
   .catalog-item__link {
@@ -82,20 +97,51 @@
   .catalog-item__price-wrap {
     margin-top: auto;
   }
+
+  .catalog-item__text {
+    @include font-info(20px, 700, 24px);
+  }
+
+  .catalog-item__desc {
+    @include font-info(15px, 400, 30px);
+    margin-top: 7px;
+    margin-bottom: 0;
+  }
+
+  .catalog-item__price {
+    @include font-info(17px, 700, 24px);
+    padding-left: 5px;
+  }
+
+  .catalog-item__price-icon {
+    right: 5px;
+  }
 }
 
 @media (min-width: $desktop-width) {
   .catalog-item {
+    display: flex;
     flex-direction: column;
-    margin-bottom: 60px;
+    margin-bottom: 55px;
+    margin-right: 48px;
 
-    &:not(:nth-child(3n+3)) {
-      margin-right: 50px;
+    &:nth-child(3n) {
+      margin-right: 0;
     }
   }
 
-  .catalog-item__wrapper,
   .catalog-item__link {
-    width: 100%;
+    width: 315px;
+  }
+
+  .catalog-item__wrapper {
+    width: 315px;
+    padding-top: 25px;
+    min-height: 197px;
+    padding-bottom: 25px;
+  }
+
+  .catalog-item__price {
+    padding-left: 0;
   }
 }
