@@ -1,20 +1,35 @@
 .social-list {
   @include reset-list;
   display: flex;
-  justify-content: center;
   padding: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-top: 30px;
+  padding-left: 60px;
 
   @media (min-width: $tablet-width) {
     padding: 0;
+    margin-left: 160px;
+    margin-top: 13px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 120px;
+    margin-top: 10px;
   }
 }
 
 .social-list__item {
-  margin-right: 30px;
+  margin-right: 40px;
 }
 
 .social-list__icon {
   fill: $darkgrey;
+
+  &--facebook {
+    position: relative;
+    bottom: 5px;
+  }
 }
 
 .social-list__link {
@@ -24,5 +39,11 @@
 
   &:active .social-list__icon {
     opacity: 0.3;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-footer {
+    margin-top: 50px;
   }
 }

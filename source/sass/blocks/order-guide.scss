@@ -2,14 +2,17 @@
   @include container;
   @include font-info(13px, 400, 24px);
   color: $grey;
-  margin-bottom: 30px;
-  margin-top: 30px;
+  margin-bottom: 25px;
+  margin-top: 23px;
 
   @media (min-width: $tablet-width) {
     @include font-info(17px, 400, 30px);
+    margin-top: 66px;
+    margin-bottom: 40px;
   }
 
   @media (min-width: $desktop-width) {
-    width: 672px;
+    width: 700px;
+    margin-top: 115px;
   }
 }
