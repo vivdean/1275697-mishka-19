@@ -22,10 +22,10 @@
 }
 
 .contacts__link {
+  @include transition;
   color: $grey;
   border-bottom: 1px solid $aquablue;
   padding-bottom: 5px;
-  transition: 0.3s;
 
   &:hover {
     color: $hoverdarkblue;
@@ -46,9 +46,8 @@
 }
 
 .contacts__feedback {
-  @include font-info(17px, 700, 20px);
-  padding: 15px 55px;
-  width: 150px;
+  @include font-info(18px, 700, 20px);
+  padding: 15px 50px;
 }
 
 .contacts__feedback-wrap {
@@ -121,6 +120,7 @@
   }
 
   .contacts__feedback {
+    @include font-info(17px, 700, 20px);
     padding: 15px 37px;
   }
 

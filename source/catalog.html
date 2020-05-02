@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Мишка</title>
     <link href="css/style.min.css" rel="stylesheet">
+    <link rel="preload" href="/fonts/opensans.woff2" as="font">
+    <script src="js/picturefill.js" async></script>
   </head>
   <body>
     <div style="display: none;">
@@ -68,6 +70,9 @@
         <li class="catalog-item">
           <a class="catalog-item__link" href="#">
             <picture>
+              <source type="image/webp" media="(min-width: 1150px)" srcset="img/photo-hare-desktop@1x.webp 1x, img/photo-hare-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-hare-tablet@1x.webp 1x, img/photo-hare-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/photo-hare-mobile@1x.webp 1x, img/photo-hare-mobile@2x.webp 2x">
               <source media="(min-width: 1150px)" srcset="img/photo-hare-desktop@1x.jpg 1x, img/photo-hare-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/photo-hare-tablet@1x.jpg 1x, img/photo-hare-tablet@2x.jpg 2x">
               <img class="catalog-item__img" src="img/photo-hare-mobile@1x.jpg" srcset="img/photo-hare-mobile@2x.jpg 2x" alt="Зайчик-попрыгайчик">
@@ -89,6 +94,9 @@
         <li class="catalog-item">
           <a class="catalog-item__link" href="#">
             <picture>
+              <source type="image/webp" media="(min-width: 1150px)" srcset="img/photo-bowl-desktop@1x.webp 1x, img/photo-bowl-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-bowl-tablet@1x.webp 1x, img/photo-bowl-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/photo-bowl-mobile@1x.webp 1x, img/photo-bowl-mobile@2x.webp 2x">
               <source media="(min-width: 1150px)" srcset="img/photo-bowl-desktop@1x.jpg 1x, img/photo-bowl-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/photo-bowl-tablet@1x.jpg 1x, img/photo-bowl-tablet@2x.jpg 2x">
               <img class="catalog-item__img" src="img/photo-bowl-mobile@1x.jpg" srcset="img/photo-bowl-mobile@2x.jpg 2x" alt="Корзинка для белья">
@@ -110,6 +118,9 @@
         <li class="catalog-item">
           <a class="catalog-item__link" href="#">
             <picture>
+              <source type="image/webp" media="(min-width: 1150px)" srcset="img/photo-toys-desktop@1x.webp 1x, img/photo-toys-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-toys-tablet@1x.webp 1x, img/photo-toys-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/photo-toys-mobile@1x.webp 1x, img/photo-toys-mobile@2x.webp 2x">
               <source media="(min-width: 1150px)" srcset="img/photo-toys-desktop@1x.jpg 1x, img/photo-toys-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/photo-toys-tablet@1x.jpg 1x,  img/photo-toys-tablet@2x.jpg 2x">
               <img class="catalog-item__img" src="img/photo-toys-mobile@1x.jpg" srcset="img/photo-toys-mobile@2x.jpg 2x" alt="Большая корзинка для игрушек">
@@ -132,6 +143,9 @@
       <div class="player">
         <h3 class="player__title">Процесс производства</h3>
         <picture>
+          <source type="image/webp" media="(min-width: 1150px)" srcset="img/video-desktop@1x.webp 1x, img/video-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)" srcset="img/video-tablet@1x.webp 1x, img/video-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="img/video-mobile@1x.webp 1x, img/video-mobile@2x.webp 2x">
           <source media="(min-width: 1150px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
           <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
           <img class="player__image" src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x" alt="Видеозапись процесса производства">
@@ -139,7 +153,7 @@
         <button class="player__button button" type="button" aria-label="Включить видеозапись"></button>
         <div class="player__desc">
           <p class="player__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-          <a class="player__order button" href="#">Сделать заказ</a>
+          <a class="player__order button button--ghost" href="#">Сделать заказ</a>
         </div>
       </div>
     </main>
@@ -147,7 +161,7 @@
     <footer>
       <div class="page-footer">
         <div class="page-footer__wrapper">
-          <a class="page-footer__logo" href="#">
+          <a class="page-footer__logo" href="#" aria-label="Логотип магазина Мишка">
             <svg class="page-footer__icon" width="101.615px" height="34.056px">
               <use xlink:href="#logo-footer"></use>
             </svg>
@@ -176,8 +190,8 @@
             </li>
           </ul>
           <div class="page-footer__copyright copyright">
-            <b class="copyright__text">Разработано</b>
             <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy">
+              <b class="copyright__text">Разработано</b>
               <svg class="copyright__icon" width="26.943px" height="34.09px">
                 <use xlink:href="#logo-htmlacademy"></use>
               </svg>
@@ -189,7 +203,7 @@
 
     <div class="modal">
       <div class="modal__content">
-      <h2 class="modal__title">Добавить в&nbspкорзину</h2>
+      <h2 class="modal__title">Добавить в&nbsp;корзину</h2>
         <p class="modal__text">Выберите размер:</p>
       <form class="modal__form" method="get" action="https://echo.htmlacademy.ru">
         <div class="modal__list">
@@ -209,10 +223,9 @@
           <button class="modal__button button" type="submit">Добавить</button>
       </form>
       </div>
-      <div class="modal__overlay"></div>
     </div>
 
-    <script src="js/script.js"></script>
+    <script src="js/script.min.js"></script>
 
   </body>
 </html>

@@ -16,6 +16,7 @@
 }
 
 .player__button {
+  @include transition;
   position: absolute;
   top: 28%;
   left: 31%;
@@ -25,7 +26,6 @@
   border: none;
   width: 101px;
   height: 77px;
-  transition: 0.3s;
 
   &:hover {
     transform: scale(1.2);

@@ -91,6 +91,8 @@
   width: 100%;
   box-shadow: inset 0 -2px 0 0 $black;
 
+  @include transition;
+
   &:hover {
     box-shadow: inset 0 -2px 0 0 $formhoverblue;
   }
@@ -140,6 +142,10 @@
     border: 2px solid $grey;
     opacity: 0.3;
   }
+
+  &:disabled + label::before {
+    opacity: 0.1;
+  }
 }
 
 .order-form__input--radio:checked {
@@ -152,6 +158,10 @@
     width: 15px;
     border-radius: 50%;
     background-color: $aquablue;
+  }
+
+  &:disabled + label::before {
+    opacity: 0.1;
   }
 }
 
@@ -179,6 +189,10 @@
     border: 2px solid $grey;
     opacity: 0.3;
   }
+
+  &:disabled + label::before {
+    opacity: 0.1;
+  }
 }
 
 .order-form__input--checkbox:checked {
@@ -191,6 +205,10 @@
     height: 36px;
     background-image: url("../img/icon-tick.svg");
     background-repeat: no-repeat;
+  }
+
+  &:disabled + label::before {
+    opacity: 0.1;
   }
 }
 
@@ -227,6 +245,8 @@
 }
 
 .order-form__option--user-contacts {
+  @include transition;
+
   &:hover .order-form__icon {
     fill: $formhoverblue;
     opacity: 1;
@@ -444,17 +464,18 @@
 
 @media (min-width: $desktop-width) {
   .order-form__item {
-    width: 700px;
+    max-width: 700px;
     margin: 0 auto;
 
     &--color {
-      width: 800px;
       margin-top: 12px;
+      max-width: 800px;
+      padding-left: 100px;
     }
   }
 
   .order-form__title {
-    width: 100px;
+    max-width: 100px;
     left: -115px;
 
     &--tel,
@@ -467,17 +488,12 @@
     }
 
     &--color {
-      left: -15px;
+      left: -110px;
     }
   }
 
   .order-form__list {
     margin-left: 0;
-
-    &--color {
-      width: 800px;
-      margin-left: 100px;
-    }
   }
 
   .order-form__option {

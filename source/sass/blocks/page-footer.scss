@@ -6,6 +6,8 @@
 .page-footer__logo {
   display: none;
 
+  @include transition;
+
   &:hover .page-footer__icon {
     fill: $hoverdarkblue;
   }
