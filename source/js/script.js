@@ -7,7 +7,7 @@ navToggle.addEventListener("click", function() {
   navMain.classList.toggle("main-nav--hide");
 });
 
-var link = document.querySelectorAll(".button--order");
+var link = document.querySelectorAll(".button-order");
 var modal = document.querySelector(".modal");
 var close = modal.querySelector(".modal__button");
 var input = modal.querySelector("[name=size]");
