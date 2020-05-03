@@ -29,10 +29,12 @@
 
   &:hover {
     color: $hoverdarkblue;
+    border-bottom: 1px solid $hoverdarkblue;
   }
 
   &:active {
     color: $downblue;
+    border-bottom: 1px solid $downblue;
   }
 }
 
