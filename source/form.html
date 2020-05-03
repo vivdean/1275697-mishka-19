@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Мишка</title>
     <link href="css/style.min.css" rel="stylesheet">
+    <link rel="preload" href="/fonts/opensans.woff2" as="font">
+    <script src="js/picturefill.min.js" async></script>
   </head>
   <body>
     <div style="display: none;">
@@ -152,13 +154,13 @@
         <div class="order-form__item order-form__item--letter">
           <p class="order-form__option order-form__option--letter">
             <label for="letter-field" class="order-form__title order-form__title--letter">Доп</label>
-            <textarea class="order-form__input order-form__input--textarea" id="letter-field" name="letter" rows="6.5" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+            <textarea class="order-form__input order-form__input--textarea" id="letter-field" name="letter" rows="5" placeholder="Опишите все ваши пожелания к заказу"></textarea>
           </p>
           <div class="order-form__legend-wrap">
             <small class="order-form__legend">
             <sup>*</sup>Поля обязательны для заполнения
           </small>
-          <button class="order-form__button button" type="submit">Отправить заказ</button>
+          <button class="order-form__button button button--ghost" type="submit">Отправить заказ</button>
           </div>
         </div>
       </form>
@@ -167,7 +169,7 @@
     <footer>
       <div class="page-footer">
         <div class="page-footer__wrapper">
-          <a class="page-footer__logo" href="#">
+          <a class="page-footer__logo" href="#" aria-label="Логотип магазина Мишка">
             <svg class="page-footer__icon" width="101.615px" height="34.056px">
               <use xlink:href="#logo-footer"></use>
             </svg>
@@ -196,9 +198,9 @@
             </li>
           </ul>
           <div class="page-footer__copyright copyright">
-            <b class="copyright__text">Разработано</b>
             <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy">
-              <svg class="copyright__icon" width="26.943px" height="34.09px" v="">
+              <b class="copyright__text">Разработано</b>
+              <svg class="copyright__icon" width="26.943px" height="34.09px">
                 <use xlink:href="#logo-htmlacademy"></use>
               </svg>
             </a>
@@ -207,7 +209,7 @@
       </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="js/script.min.js"></script>
 
   </body>
 </html>

@@ -6,11 +6,13 @@
     <meta name="format-detection" content="telephone=no">
     <title>HTML Academy: Мишка</title>
     <link href="css/style.min.css" rel="stylesheet">
+    <link rel="preload" href="/fonts/opensans.woff2" as="font">
+    <script src="js/picturefill.min.js" async></script>
     </head>
   <body>
-<div style="display: none;">
-  <include src="build/img/sprite.svg"></include>
-</div>
+    <div style="display: none;">
+      <include src="build/img/sprite.svg"></include>
+    </div>
     <header class="page-header page-header--index">
       <nav class="main-nav main-nav--hide main-nav--nojs">
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
@@ -97,13 +99,16 @@
             </table>
           </div>
           <picture>
+            <source type="image/webp" media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.webp 1x, img/triple-set-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.webp 1x, img/triple-set-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/triple-set-mobile@1x.webp 1x, img/triple-set-mobile@2x.webp 2x">
             <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
             <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
             <img class="product-of-week__img" src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" alt="Вязаные корзинки">
           </picture>
           <div class="product-of-week__wrap-order">
             <p class="product-of-week__price">Цена: 990 руб.</p>
-            <a class="product-of-week__order button button--order" href="#">Заказать</a>
+            <a class="product-of-week__order button button--order button--ghost" href="order.html">Заказать</a>
           </div>
         </div>
       </section>
@@ -135,7 +140,7 @@
         <div class="reviews__wrap-buttons">
           <button class="reviews__button reviews__button--prev" type="button" aria-label="Предыдущий отзыв"></button>
           <button class="reviews__button reviews__button--next" type="button" aria-label="Следующий отзыв"></button>
-          <a class="reviews__write-button button" href="#">Написать</a>
+          <a class="reviews__write-button button button--ghost" href="#">Написать</a>
         </div>
       </section>
     </main>
@@ -154,12 +159,12 @@
           <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1585946912865!5m2!1sru!2sru" height="457" allowfullscreen=""></iframe>
         </div>
         <div class="contacts__feedback-wrap">
-          <a class="contacts__feedback button" href="#">Напишите нам</a>
+          <a class="contacts__feedback button button--ghost" href="#">Напишите нам</a>
         </div>
       </div>
       <div class="page-footer">
         <div class="page-footer__wrapper">
-          <a class="page-footer__logo" href="#">
+          <a class="page-footer__logo" href="#" aria-label="Логотип магазина Мишка">
             <svg class="page-footer__icon" width="101.615px" height="34.056px">
               <use xlink:href="#logo-footer"></use>
             </svg>
@@ -187,10 +192,10 @@
               </a>
             </li>
           </ul>
-          <div class="page-footer__copyright copyright copyright--mobile">
-            <b class="copyright__text">Разработано</b>
+          <div class="page-footer__copyright copyright">
             <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy">
-              <svg class="copyright__icon" width="26.943px" height="34.09px" v="">
+              <span class="copyright__text">Разработано</span>
+              <svg class="copyright__icon" width="26.943px" height="34.09px">
                 <use xlink:href="#logo-htmlacademy"></use>
               </svg>
             </a>
@@ -201,7 +206,7 @@
 
     <div class="modal">
       <div class="modal__content">
-        <h2 class="modal__title">Добавить в&nbspкорзину</h2>
+        <h2 class="modal__title">Добавить в&nbsp;корзину</h2>
           <p class="modal__text">Выберите размер:</p>
         <form class="modal__form" method="get" action="https://echo.htmlacademy.ru">
           <div class="modal__list">
@@ -220,10 +225,10 @@
           </div>
             <button class="modal__button button" type="submit">Добавить</button>
         </form>
-        </div>
       </div>
+    </div>
 
-    <script src="js/script.js"></script>
+    <script src="js/script.min.js"></script>
 
   </body>
 </html>

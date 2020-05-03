@@ -8,27 +8,27 @@ navToggle.addEventListener("click", function() {
 });
 
 var link = document.querySelectorAll(".button--order");
-var popup = document.querySelector(".modal__content");
-var close = popup.querySelector(".modal__button");
-var input = popup.querySelector("[name=size]");
+var modal = document.querySelector(".modal");
+var close = modal.querySelector(".modal__button");
+var input = modal.querySelector("[name=size]");
 
 
-link.forEach(function (enter) {
-  enter.addEventListener("click", function (evt) {
+for (var i = 0; i < link.length; i++) {
+  link[i].addEventListener("click", function(evt) {
   evt.preventDefault();
-  popup.classList.add("modal__content--show");
+  modal.classList.add("modal--show");
   input.focus();
   });
-});
+}
 
 close.addEventListener("click", function () {
-  popup.classList.remove("modal__content--show");
+  modal.classList.remove("modal--show");
 });
 
 window.addEventListener("keydown", function (evt) {
   if (evt.keyCode === 27) {
-    if (popup.classList.contains("modal__content--show")) {
-      popup.classList.remove("modal__content--show");
+    if (modal.classList.contains("modal--show")) {
+      modal.classList.remove("modal--show");
     }
   }
 });

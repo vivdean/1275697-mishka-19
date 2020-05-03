@@ -5,6 +5,7 @@
 
 .product-list__link {
   @include font-info(19px, 700, 24px);
+  @include transition;
   padding-top: 25px;
   padding-bottom: 29px;
   padding-left: 30px;
@@ -12,7 +13,6 @@
   display: block;
   position: relative;
   box-sizing: border-box;
-  transition: 0.3s;
   padding-right: 100px;
 
   &:hover {

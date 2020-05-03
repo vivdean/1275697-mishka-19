@@ -11,8 +11,9 @@
     background-repeat: repeat-x;
     bottom: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     height: 6px;
+    margin-left: calc(50% - 50vw);
   }
 }
 
@@ -121,6 +122,8 @@
     border: none;
     bottom: 53px;
 
+    @include transition;
+
     &--prev {
       left: 17px;
     }
@@ -164,6 +167,8 @@
       background-size: 1150px;
       height: 23px;
       bottom: -90px;
+      margin: 0;
+      width: 100%;
     }
   }
 

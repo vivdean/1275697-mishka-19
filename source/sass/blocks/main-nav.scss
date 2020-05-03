@@ -1,9 +1,9 @@
 .main-nav__link {
   @include font-info (17px, 700, 24px);
+  @include transition;
   display: inline-block;
   vertical-align: middle;
   color: $black;
-  transition: 0.3s;
   padding-top: 27px;
   padding-bottom: 27px;
   padding-left: 45px;
