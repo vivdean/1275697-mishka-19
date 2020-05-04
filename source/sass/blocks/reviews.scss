@@ -1,7 +1,7 @@
 .reviews {
   @include container;
   position: relative;
-  padding-bottom: 50px;
+  padding-bottom: 52px;
 
   &::after {
     content: "";
@@ -12,8 +12,9 @@
     bottom: 0;
     left: 0;
     width: 100vw;
-    height: 6px;
+    height: 7px;
     margin-left: calc(50% - 50vw);
+    background-position: -7px 0;
   }
 }
 
@@ -69,7 +70,7 @@
 }
 
 .reviews__write-button {
-  @include font-info(17px, 700, 20px);
+  @include font-info(18px, 700, 20px);
   padding: 13px 80px;
   margin-top: 30px;
 }
@@ -93,9 +94,10 @@
     }
 
     &::after {
-      background-size: 768px;
-      height: 15px;
+      background-size: 770px;
+      height: 16px;
       bottom: -80px;
+      background-position: -20px 0;
     }
   }
 
@@ -110,6 +112,7 @@
   }
 
   .reviews__write-button {
+    @include font-info(17px, 700, 20px);
     padding-right: 0;
     padding-left: 0;
     width: 100%;
@@ -161,14 +164,15 @@
   .reviews {
     box-sizing: border-box;
     padding: 0;
-    margin-top: 40px;
+    margin-top: 35px;
 
     &::after {
-      background-size: 1150px;
+      background-size: 1050px;
       height: 23px;
       bottom: -90px;
       margin: 0;
       width: 100%;
+      background-position: 25px;
     }
   }
 
@@ -186,7 +190,7 @@
   }
 
   .reviews__text {
-    margin-bottom: 35px;
+    margin-bottom: 38px;
     width: 770px;
   }
 

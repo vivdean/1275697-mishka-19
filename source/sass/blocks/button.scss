@@ -8,3 +8,19 @@
   color: $grey;
   background-color: $white;
 }
+
+.button--ghost {
+  cursor: pointer;
+
+  @include transition;
+
+  &:hover {
+    color: $white;
+    background-color: $grey;
+  }
+
+  &:active {
+    color: $downwhite;
+    background-color: $grey;
+  }
+}

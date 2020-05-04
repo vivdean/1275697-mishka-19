@@ -29,18 +29,3 @@ img {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-
-.button--ghost {
-  cursor: pointer;
-
-  @include transition;
-
-  &:hover {
-    color: $white;
-    background-color: $grey;
-  }
-
-  &:active {
-    color: $downwhite;
-  }
-}
