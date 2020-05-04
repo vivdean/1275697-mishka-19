@@ -115,7 +115,7 @@
     min-height: 0;
   }
 
-  .main-nav--nojs .main-nav__list {
+  .main-nav--nojs .main-nav__list--mobile {
     display: block;
   }
 }
@@ -142,6 +142,8 @@
   }
 
   .main-nav__text {
+    @include font-info(15px, 400, 24px);
+    text-align: right;
     display: block;
     order: 3;
     margin-top: 5px;

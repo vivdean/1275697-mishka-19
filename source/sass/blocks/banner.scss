@@ -62,9 +62,10 @@
       position: absolute;
       background-image: url("../img/bg-zigzag-fill-tablet.svg");
       background-repeat: repeat-x;
-      bottom: -2px;
+      bottom: -7px;
       left: 0;
-      width: 100%;
+      width: 100vw;
+      margin-left: calc(50% - 50vw);
       height: 25px;
       z-index: 1;
     }
@@ -79,19 +80,27 @@
 
 @media (min-width: $desktop-width) {
   .banner {
+    &::after {
+      background-image: url("../img/bg-zigzag-fill.svg");
+      left: 0;
+      height: 36px;
+      bottom: -9px;
+      background-size: 1150px;
+      background-position: -2px;
+    }
+
     &--index {
       background-image: url("../img/hero-desktop@1x.jpg");
 
       @media (min-resolution: $retina-dppx) {
         background-image: url("../img/hero-desktop@2x.jpg");
       }
-    }
 
-    &::after {
-      background-image: url("../img/bg-zigzag-fill.svg");
-      left: 0;
-      height: 34px;
-      bottom: -7px;
+      &::after {
+        background-size: 1250px;
+        background-position: 12px;
+        bottom: -7px;
+      }
     }
 
     &--form {
