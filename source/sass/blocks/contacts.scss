@@ -40,10 +40,10 @@
 
 .contacts__item {
   padding-bottom: 30px;
+  width: 30%;
 
   &--value {
-    width: 180px;
-    margin-left: 32px;
+    width: 70%;
   }
 }
 
@@ -74,13 +74,12 @@
 
 @media (min-width: $tablet-width) {
   .contacts__item {
-    &:nth-child(3) {
-      margin-left: 33px;
-    }
+    width: auto;
 
     &--value {
-      width: 225px;
+      min-width: 225px;
       margin-left: 23px;
+      flex-grow: 1;
     }
   }
 
