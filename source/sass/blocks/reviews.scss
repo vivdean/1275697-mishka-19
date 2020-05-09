@@ -20,7 +20,7 @@
 
 .reviews__item {
   margin: 30px 0;
-  margin-bottom: 90px;
+  margin-bottom: 40px;
   margin-top: 24px;
 }
 
@@ -46,25 +46,29 @@
   margin-top: 3px;
 }
 
+.reviews__wrap-buttons {
+  font-size: 0;
+}
+
 .reviews__button {
+  display: inline-block;
+  vertical-align: middle;
   box-sizing: border-box;
-  position: absolute;
-  width: 130px;
+  width: 50%;
   height: 50px;
   border: 1px solid $bg-grey;
-  bottom: 140px;
+  padding: 0;
+  margin-left: 0;
   cursor: pointer;
   background-color: $white;
   background-repeat: no-repeat;
   background-position: center;
 
   &--prev {
-    left: 30px;
     background-image: url("../img/icon-left-arrow.svg");
   }
 
   &--next {
-    right: 30px;
     background-image: url("../img/icon-right-arrow.svg");
   }
 }
@@ -73,6 +77,8 @@
   @include font-info(18px, 700, 20px);
   padding: 13px 80px;
   margin-top: 30px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 @media (min-width: $tablet-width) {
@@ -121,6 +127,7 @@
   }
 
   .reviews__button {
+    position: absolute;
     width: 50px;
     border: none;
     bottom: 53px;

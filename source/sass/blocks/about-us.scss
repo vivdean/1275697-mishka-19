@@ -15,6 +15,7 @@
   @include font-info(17px, 700, 20px);
   padding-top: 63px;
   padding-bottom: 20px;
+  max-width: 260px;
   position: relative;
 
   &::before {
@@ -102,11 +103,12 @@
 
   .about-us__wrapper {
     display: flex;
+    flex-wrap: wrap;
   }
 
   .about-us__list {
-    &:first-child {
-      margin-right: 55px;
+    &--right {
+      margin: 0 auto;
     }
   }
 }

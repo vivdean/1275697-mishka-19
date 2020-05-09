@@ -49,6 +49,8 @@
 }
 
 .main-nav__wrapper {
+  @include container;
+  width: auto;
   display: flex;
   flex-direction: column;
 }
@@ -118,6 +120,10 @@
   .main-nav--nojs .main-nav__list--mobile {
     display: block;
   }
+
+  .main-nav__wrapper {
+    padding: 0;
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -131,7 +137,7 @@
   }
 
   .main-nav__wrapper {
-    @include container;
+    max-width: 999px;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
@@ -173,6 +179,7 @@
 
   .main-nav__logo {
     order: 0;
+    margin-right: 205px;
 
     &:hover {
       opacity: 0.6;
@@ -231,6 +238,7 @@
 
 @media (min-width: $desktop-width) {
   .main-nav__wrapper {
+    @include container;
     justify-content: space-between;
   }
 

@@ -3,7 +3,7 @@
   padding-bottom: 40px;
   position: relative;
   margin: 0 auto;
-  width: 260px;
+  /*width: 260px;*/
 
   &::after {
     content: "";
@@ -65,6 +65,16 @@
   margin-bottom: 10px;
 }
 
+.product-of-week__picture {
+  display: block;
+  width: 100%;
+}
+
+.product-of-week__img {
+  width: 100%;
+}
+
+
 .product-of-week__order {
   @include font-info(17px, 700, 20px);
   padding: 14px 0;
@@ -73,11 +83,27 @@
   box-sizing: border-box;
 }
 
+.product-of-week__wrapper-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.product-of-week__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product-of-week__wrap-order {
+  width: 100%;
+}
+
 @media (min-width: $tablet-width) {
   .product-of-week {
     display: flex;
     flex-direction: column;
-    padding-bottom: 70px;
+    padding-bottom: 90px;
 
     &::after {
       background-size: 770px;
@@ -90,23 +116,26 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    position: relative;
   }
 
   .product-of-week__wrap-info,
   .product-of-week__wrap-order {
-    width: 290px;
+    width: calc(100% - 373px);
+    flex-grow: 1;
   }
 
-  .product-of-week__img {
+  .product-of-week__picture {
+    max-width: 333px;
     position: absolute;
-    top: 153px;
-    right: 50px;
+    top: 0;
+    right: 0;
   }
 
   .product-of-week__wrapper-title {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    align-items: center;
     margin: 45px 0;
     margin-bottom: 49px;
   }
@@ -125,7 +154,7 @@
 
   .product-of-week__list {
     margin: 35px 0;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
   }
 
   .product-of-week__text {
@@ -165,9 +194,16 @@
     margin: 0;
   }
 
-  .product-of-week__img {
-    right: 0;
-    top: 70px;
+  .product-of-week__img,
+  .product-of-week__picture {
+    max-width: 525px;
+    top: -160px;
+  }
+
+  .product-of-week__wrap-info,
+  .product-of-week__wrap-order {
+    width: 290px;
+    flex-grow: 0;
   }
 
   .product-of-week__price {
@@ -192,7 +228,7 @@
     padding-left: 0;
     padding-right: 0;
     margin: 0 auto;
-    padding-bottom: 95px;
+    padding-bottom: 96px;
 
     &::after {
       background-size: 1050px;
