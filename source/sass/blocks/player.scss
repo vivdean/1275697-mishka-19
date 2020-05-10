@@ -5,7 +5,6 @@
 .player__content {
   min-width: 262px;
   border: 1px solid $bordergrey;
-  position: relative;
   margin-bottom: 60px;
 
   &:hover {
@@ -17,11 +16,16 @@
   }
 }
 
+.player__image-wrap {
+  position: relative;
+}
+
 .player__button {
   @include transition;
   position: absolute;
-  top: 28%;
-  left: 31%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   cursor: pointer;
   background-image: url("../img/icon-play.svg");
   background-color: transparent;
@@ -111,11 +115,6 @@
     }
   }
 
-  .player__button {
-    top: 26%;
-    left: 43%;
-  }
-
   .player__text {
     @include font-info(15px, 400, 30px);
     margin-top: 5px;
@@ -158,17 +157,12 @@
     }
   }
 
-  .player__image {
+  .player__image-wrap {
     order: 3;
     position: absolute;
     top: 0;
     left: 0;
     max-width: 682px;
-  }
-
-  .player__button {
-    top: 40%;
-    left: 28%;
   }
 
   .player__text {
