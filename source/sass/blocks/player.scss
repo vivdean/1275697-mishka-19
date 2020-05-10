@@ -1,7 +1,9 @@
 .player {
-  width: 262px;
-  box-sizing: border-box;
-  margin: 0 auto;
+  @include container;
+}
+
+.player__content {
+  min-width: 262px;
   border: 1px solid $bordergrey;
   position: relative;
   margin-bottom: 60px;
@@ -39,16 +41,18 @@
 
 .player__title {
   @include font-info(17px, 700, 24px);
-  padding-left: 90px;
+  padding-left: 50px;
   position: relative;
   margin-top: 25px;
   margin-bottom: 25px;
+  max-width: 200px;
+  margin-left: 10%;
 
   &::before {
     position: absolute;
     content: "";
     top: 5px;
-    left: 35px;
+    left: 0;
     width: 32px;
     height: 32px;
     background-image: url("../img/icon-video.svg");
@@ -58,27 +62,28 @@
 .player__text {
   @include font-info(13px, 400, 24px);
   color: $grey;
-  width: 185px;
   margin-bottom: 25px;
 }
 
 .player__order {
   @include font-info(17px, 700, 20px);
-  padding: 14px 25px;
+  padding: 14px 0;
+  width: 100%;
 }
 
 .player__desc {
-  padding: 12px 33px;
+  padding: 12px 10%;
   padding-bottom: 32px;
 }
 
 .player__image {
   display: block;
+  width: 100%;
 }
 
 @media (min-width: $tablet-width) {
-  .player {
-    width: 672px;
+  .player__content {
+    min-width: 672px;
     display: flex;
     flex-direction: column;
     margin-bottom: 65px;
@@ -88,13 +93,7 @@
     order: 1;
   }
 
-  .player__order {
-    width: 100%;
-    box-sizing: border-box;
-  }
-
   .player__desc {
-    width: 584px;
     margin: 0 auto;
     padding-top: 0;
     order: 3;
@@ -104,11 +103,10 @@
   .player__title {
     @include font-info(20px, 700, 24px);
     order: 2;
-    padding-left: 108px;
     margin-top: 40px;
+    max-width: 100%;
 
     &::before {
-      left: 40px;
       top: -5px;
     }
   }
@@ -120,14 +118,13 @@
 
   .player__text {
     @include font-info(15px, 400, 30px);
-    width: 100%;
     margin-top: 5px;
     margin-bottom: 35px;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .player {
+  .player__content {
     width: 1050px;
     flex-wrap: wrap;
     position: relative;
@@ -141,7 +138,9 @@
     order: 1;
     margin: 0;
     padding-bottom: 58px;
-    margin-right: 25px;
+    padding-left: 0;
+    padding-right: 0;
+    margin-right: 60px;
   }
 
   .player__title {
@@ -164,6 +163,7 @@
     position: absolute;
     top: 0;
     left: 0;
+    max-width: 682px;
   }
 
   .player__button {

@@ -35,8 +35,13 @@
   margin-bottom: 20px;
 }
 
-.catalog-item__img {
+.catalog-item__img,
+.catalog-item__link {
   display: block;
+}
+
+.catalog-item__img {
+  width: 100%;
 }
 
 .catalog-item__price {
